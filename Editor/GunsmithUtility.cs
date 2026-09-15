@@ -22,7 +22,7 @@ using VRC.SDK3.Avatars.Components;
 using VRC.SDK3.Avatars.ScriptableObjects;
 using System.Linq;
 
-namespace LoliPoliceDepartment.Utilities.Gunsmith
+namespace localPoliceDepartment.Utilities.Gunsmith
 {
     public class GunsmithUtility : EditorWindow
     {
@@ -89,10 +89,10 @@ namespace LoliPoliceDepartment.Utilities.Gunsmith
         AnimationClip MagCheckOutAnim;
         AnimationClip MagCheckInAnim;
 
-        [MenuItem("LPD/Gunsmith")]
+        [MenuItem("LPD/Gunsmith (Continued)")]
         public static void ShowWindow()
         {
-            GunsmithUtility window = (GunsmithUtility)GetWindow<GunsmithUtility>("Gunsmith");
+            GunsmithUtility window = (GunsmithUtility)GetWindow<GunsmithUtility>("Gunsmith (Continued)");
             window.maxSize = new Vector2(1024f, 4000);
             window.minSize = new Vector2(256, 512);
             window.Show();
@@ -100,11 +100,11 @@ namespace LoliPoliceDepartment.Utilities.Gunsmith
 
         public void OnEnable()
         {
-            HeaderTexture = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.lolipolicedepartment.gunsmith/Editor/TITLEBAR.png", typeof(Texture2D));
-            twitterLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.lolipolicedepartment.gunsmith/Editor/SocialLogos/TwitterLogo.png", typeof(Texture2D));
-            discordLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.lolipolicedepartment.gunsmith/Editor/SocialLogos/DiscordLogo.png", typeof(Texture2D));
-            youtubeLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.lolipolicedepartment.gunsmith/Editor/SocialLogos/YoutubeLogo.png", typeof(Texture2D));
-            kofiLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.lolipolicedepartment.gunsmith/Editor/SocialLogos/KofiLogo.png", typeof(Texture2D));
+            HeaderTexture = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.localpolicedepartment.gunsmith/Editor/TITLEBAR.png", typeof(Texture2D));
+            twitterLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.localpolicedepartment.gunsmith/Editor/SocialLogos/TwitterLogo.png", typeof(Texture2D));
+            discordLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.localpolicedepartment.gunsmith/Editor/SocialLogos/DiscordLogo.png", typeof(Texture2D));
+            youtubeLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.localpolicedepartment.gunsmith/Editor/SocialLogos/YoutubeLogo.png", typeof(Texture2D));
+            kofiLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/com.localpolicedepartment.gunsmith/Editor/SocialLogos/KofiLogo.png", typeof(Texture2D));
         }
 
         private void OnGUI()
@@ -531,7 +531,7 @@ namespace LoliPoliceDepartment.Utilities.Gunsmith
                 
                 GUI.backgroundColor = new Color(0.4509804f, 0.5411765f, 0.8588236f, 1f);
                 if (GUILayout.Button(new GUIContent(discordLogo, "Discord"), EditorStyles.miniButtonMid, GUILayout.Width(Screen.width / 4), GUILayout.Height(60))) Application.OpenURL("https://discord.gg/lpd");
-                GUI.backgroundColor = new Color(0.1137255f, .6313726f, 0.9490196f, 1f);
+                GUI.backgroundColor = new Color(0.2f, 0.2f, 0.2f, 1f);
                 if (GUILayout.Button(new GUIContent(twitterLogo, "Twitter"), EditorStyles.miniButtonMid, GUILayout.Width(Screen.width / 4), GUILayout.Height(60))) Application.OpenURL("https://x.com/LPD_vr");
                 GUI.backgroundColor = new Color(0.8039216f, 0.1254902f, 0.1215686f, 1f);
                 if (GUILayout.Button(new GUIContent(youtubeLogo, "Youtube"), EditorStyles.miniButtonMid, GUILayout.Width(Screen.width / 4), GUILayout.Height(60))) Application.OpenURL("https://www.youtube.com/@LPD_vr");
