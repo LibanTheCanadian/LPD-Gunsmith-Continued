@@ -1,5 +1,5 @@
 # Gunsmith Continued
-## This is my attempt to modernize LPD Gunsmith expect alot of bugs as i have no experience with C# I'm learning along the way. I am no way affiliated with the LPD Dev team
+###### This is my attempt to modernize LPD Gunsmith expect alot of bugs as i have no experience with C# I'm learning along the way. I am no way affiliated with the LPD Dev team
 
 A tool for setting up firearm animator controllers on avatars in VRChat
 
